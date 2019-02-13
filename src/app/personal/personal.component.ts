@@ -7,9 +7,6 @@ import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
 import { Ng2AutoCompleteModule } from "ng2-auto-complete";
 import { ExternalResourcesService } from "../data/externalResources.service";
 
-@NgModule({
-  imports: [Ng2AutoCompleteModule]
-})
 @Component({
   selector: "personalSelector",
   templateUrl: "./personal.component.html"
