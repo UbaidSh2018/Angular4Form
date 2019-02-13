@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+/*Services */
+import { FormDataService } from './data/formData.service';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -10,7 +14,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [{ provide: FormDataService, useClass: FormDataService }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
