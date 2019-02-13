@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400, 700);
+
+.board {
+  margin-top: 163px;
+  margin-right: auto;
+  margin-bottom: 163px;
+  margin-left: auto;
+  width: 40%;
+  height: auto;
+  border-radius: 4px;
+  border: 2px solid #41944185;
+  background: #ffffff;
+}
+
+.board > div.board-inner {
+  background: #fafafa url(http://subtlepatterns.com/patterns/geometry2.png);
+  background-size: 30%;
+}
+
+p.narrow {
+  width: 60%;
+  margin: 10px auto;
+}
+
+.liner {
+  height: 2px;
+  background: #ddd;
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+}
+
+.tab-content .tab-pane {
+  position: relative;
+  padding-top: 50px;
+}
+
+.tab-content .head {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.btn-outline-rounded {
+  margin: 20px 0;
+  border: 2px solid white;
+  background-color: rgba(12, 170, 105, 0.95);
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  width: 45%;
+}
+
+.btn.default {
+  background-color: #e2aa0e;
+  /*border: 2px solid #5cb85c;*/
+  color: #ffffff;
+}
+
+@media (max-width: 585px) {
+  .board {
+    width: 90%;
+    height: auto !important;
+  }
+  .tab-content .head {
+    font-size: 20px;
+  }
+  .btn-outline-rounded {
+    padding: 12px 20px;
+  }
+}
