@@ -25,25 +25,4 @@ export class WorkflowService {
       element.valid = false;
     });
   }
-
-  /**
-   *  If the previous page is validated, return blank. Otherwise, return the invalid page.
-   */
-  getFirstInvalidPage(page: string): string {
-    var found = false;
-    var valid = true;
-    var redirectToPage = "";
-
-    for (var i = 0; i < this.workflow.length && !found && valid; i++) {
-      let item = this.workflow[i];
-      if (item.page == page) {
-        found = true;
-        redirectToPage = "";
-      } else {
-        valid = item.valid;
-        redirectToPage = item.page;
-      }
-    }
-    return redirectToPage;
-  }
 }
