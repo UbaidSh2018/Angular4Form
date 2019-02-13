@@ -1,0 +1,121 @@
+<form #workForm="ngForm" class="editForm" novalidate>
+  <div class="tab-pane fade in active">
+    <br />
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+        <div class="row">
+          <div class="form-group">
+            <label class="control-label" for="userRole"
+              >What is the users role ?</label
+            >
+            <select
+              class="form-control input-md"
+              #userRole="ngModel"
+              id="userRole"
+              name="userRole"
+              placeholder="User Role"
+              [(ngModel)]="work.userRole"
+            >
+              <option *ngFor="let role of userRoles">{{ role }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="dateJoin"
+              >When did the user first join?
+              <span [hidden]="dateJoin.valid" style="color:red;font-weight:bold"
+                >*</span
+              >
+            </label>
+            <input
+              class="form-control input-md"
+              #dateJoin="ngModel"
+              required
+              id="dateJoin"
+              name="dateJoin"
+              type="date"
+              [(ngModel)]="work.dateJoin"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="inVictoria">
+              Is this person located in Victoria ?
+              <span
+                [hidden]="inVictoria.valid"
+                style="color:red;font-weight:bold"
+                >*</span
+              >
+            </label>
+            <div class="radio">
+              <label>
+                <input
+                  type="radio"
+                  #inVictoria="ngModel"
+                  required
+                  name="inVictoria"
+                  [(ngModel)]="work.inVictoria"
+                  value="Yes"
+                  (change)="onChange($event)"
+                />
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input
+                  type="radio"
+                  #inVictoria="ngModel"
+                  required
+                  name="inVictoria"
+                  [(ngModel)]="work.inVictoria"
+                  value="No"
+                  (change)="onChange($event)"
+                />
+                No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group" *ngIf="display">
+            <label class="control-label" for="locationVictoria"
+              >Where in Victoria ?
+              <span
+                [hidden]="locationVictoria.valid"
+                style="color:red;font-weight:bold"
+                >*</span
+              >
+            </label>
+            <input
+              class="form-control input-md"
+              #locationVictoria="ngModel"
+              required
+              id="locationVictoria"
+              name="locationVictoria"
+              type="text"
+              placeholder="Enter Location"
+              [(ngModel)]="work.locationVictoria"
+            />
+          </div>
+        </div>
+
+        <div class="form-group text-center space-20">
+          <button
+            id="#prevbutton"
+            class="btn btn-success btn-outline-rounded"
+            (click)="goToPrevious(workForm)"
+          >
+            Previous
+          </button>
+          <button
+            class="btn btn-outline-rounded btn-warning"
+            [disabled]="!workForm.valid"
+            (click)="submit(workForm)"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
