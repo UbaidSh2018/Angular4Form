@@ -1,0 +1,124 @@
+<form #personalForm="ngForm" class="editForm" novalidate autocomplete="off">
+  <div class="tab-pane fade in active">
+    <br />
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+        <div class="row">
+          <div class="form-group">
+            <label class="control-label" for="storeType"
+              >Store Type<span
+                [hidden]="storeType.valid"
+                style="color:red;font-weight:bold"
+                >*</span
+              >
+            </label>
+            <select
+              class="form-control input-md"
+              #storeType="ngModel"
+              required
+              id="storeType"
+              name="storeType"
+              placeholder="Store Type"
+              [(ngModel)]="personal.storeType"
+              placeholder="Click to view options"
+              (change)="onChange($event)"
+            >
+              <option *ngFor="let store of storeTypes">{{ store }}</option>
+            </select>
+          </div>
+
+          <div class="form-group" *ngIf="display">
+            <label class="control-label" for="storeMetroDetails"
+              >Provide Details
+              <span
+                [hidden]="storeMetroDetails.valid"
+                style="color:red;font-weight:bold"
+                >*</span
+              >
+            </label>
+            <input
+              class="form-control input-md"
+              #storeMetroDetails="ngModel"
+              required
+              id="storeMetroDetails"
+              name="storeMetroDetails"
+              type="text"
+              placeholder="Enter Metro Details"
+              [(ngModel)]="personal.storeMetroDetails"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="userLookup"
+              >User Lookup
+              <span
+                [hidden]="userLookup.valid"
+                style="color:red;font-weight:bold"
+                >*</span
+              >
+            </label>
+            <input
+              autocomplete="off"
+              ng2-auto-complete
+              [source]="storeData"
+              [list-formatter]="autocomplePortListFormatter"
+              display-property-name="name"
+              value-property-name="name"
+              [accept-user-input]="false"
+              tab-to-select="true"
+              class="form-control input-md"
+              #userLookup="ngModel"
+              required
+              id="userLookup"
+              name="userLookup"
+              type="text"
+              placeholder="Type to Search"
+              [(ngModel)]="personal.userLookup"
+              (change)="getSelectedItem($event)"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="firstname">First Name </label>
+            <input
+              class="form-control input-md"
+              #firstname="ngModel"
+              required
+              id="firstname"
+              name="firstname"
+              type="text"
+              placeholder=""
+              [(ngModel)]="personal.firstName"
+              readonly
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="lastname">Last Name </label>
+            <input
+              class="form-control input-md"
+              #lastname="ngModel"
+              required
+              id="lastname"
+              name="lastname"
+              type="text"
+              placeholder=""
+              [(ngModel)]="personal.lastName"
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="form-group text-center">
+          <button
+            class="btn btn-success btn-outline-rounded"
+            [disabled]="!personalForm.valid"
+            (click)="goToNext(personalForm)"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
