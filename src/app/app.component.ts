@@ -7,7 +7,7 @@ import { FormDataService } from "./data/formData.service";
   //styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = "Plexus Legal";
+  title = "Plexus";
 
   @Input() formData;
 
