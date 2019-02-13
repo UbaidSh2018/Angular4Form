@@ -30,6 +30,7 @@ export class PersonalComponent implements OnInit {
   storeData = [];
 
   ngOnInit() {
+    console.log("Personal page loaded!");
     this.personal = this.formDataService.getPersonal();
     this.checkStoreType(this.personal.storeType);
     this.externalResourcesService.getStoreData().subscribe(
@@ -44,7 +45,7 @@ export class PersonalComponent implements OnInit {
     );
   }
 
-  //Dropdown List formatter
+  // Dropdown List formatter
   autocomplePortListFormatter = (data: any): SafeHtml => {
     let html = `<span>${data.name} </span>`;
     return this.sanitizer.bypassSecurityTrustHtml(html);
@@ -85,6 +86,7 @@ export class PersonalComponent implements OnInit {
     console.log("data :", form);
     if (this.save(form)) {
       this.router.navigate(["/work"]);
+      console.log("Navigated to Work Page");
     }
   }
 }

@@ -40,7 +40,6 @@ export class WorkComponent implements OnInit {
 
   onChange(args) {
     if (args.target.value == "Yes") {
-      console.log("Display Location in Victoria field");
       this.display = true;
     } else {
       this.display = false;
