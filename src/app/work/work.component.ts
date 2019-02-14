@@ -1,3 +1,9 @@
+/**
+ * This component defines the Work(page 2) component.
+ *  It contains properties and functions bound to Work view.
+ *  It also contains the presentation logic for Work view, 
+ * 
+ * */
 import { Component, OnInit, Input } from "@angular/core";
 import { Router } from "@angular/router";
 

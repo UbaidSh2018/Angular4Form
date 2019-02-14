@@ -1,3 +1,6 @@
+/** This service is responsible for retrieving data from external API for autocomplete feature
+ * and posting data to webhook
+ * */
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
@@ -11,7 +14,7 @@ export class ExternalResourcesService {
   webHookUrl: string =
     "https://webhook.site/a49cce24-6678-4444-a2a0-93677c41f792";
 
-  getStoreData() {
+  getAutoCompleteNameData() {
     return this.http.get(this.autoCompleteUrl);
   }
 

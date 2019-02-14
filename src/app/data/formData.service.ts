@@ -1,3 +1,6 @@
+/** This service is responsible for sharing the input form data with the PersonalComponent
+ *  and WorkComponent.
+ * */
 import { Injectable } from "@angular/core";
 import { FormData, Personal, Work } from "./formData.model";
 import { PAGES } from "../workflow/workflow.model";

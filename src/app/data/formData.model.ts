@@ -1,3 +1,7 @@
+/** This model class defines form fields
+ *'
+  */
+
 export class FormData {
   storeType: any = "";
   storeMetroDetails: string = "";

@@ -18,9 +18,9 @@ My approach to taking on this challenge started off with two questions:
 1. Should I rush through the solution, deliver within the tight deadline and somehow make it work?
 2. Should I take my time and use it as an opportunity to build a new skill while doing this task?
     
-Initial thoughts: Go for number 2. But.... You need a job. There might be others submitting their codes before you. 
+Initial thoughts: Go for number 2. But You need a job. There might be others submitting their codes before you. 
     
- ##### But...
+ ##### Hold On...
 
 > What is my biggest motivation to apply for this job? - To learn new technologies!
 
@@ -60,7 +60,10 @@ Take your time, build a new skill and prove your learning capabilities.
 2.  Each file handles a specific job assigned to it.   
     
 3.	Naming of functions in the project has been done in a way to make them self-explanatory. 
-    Thus, removing the need to explain in detail what's happening inside.    
+    Thus, removing the need to explain in detail what's happening inside.
+4.  The project implements a Routing Module for the sake of consistency.This adds the capability to find and expand routing     configuration.
+
+   
     
 ---                            
     

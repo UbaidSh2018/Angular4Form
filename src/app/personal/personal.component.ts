@@ -1,3 +1,9 @@
+/**
+ * This class defines the Personal(page 1) component.
+ * It contains properties and functions bound to Personal view.
+ * It also contains the presentation logic for Personal view,
+ * 
+ * */
 import { Component, OnInit, NgModule } from "@angular/core";
 import { Router } from "@angular/router";
 
@@ -30,7 +36,7 @@ export class PersonalComponent implements OnInit {
     console.log("Personal page loaded!");
     this.personal = this.formDataService.getPersonal();
     this.checkStoreType(this.personal.storeType);
-    this.externalResourcesService.getStoreData().subscribe(
+    this.externalResourcesService.getAutoCompleteNameData().subscribe(
       (response: any) => {
         for (let item of response.results) {
           this.storeData.push({ name: item.name.first + " " + item.name.last });

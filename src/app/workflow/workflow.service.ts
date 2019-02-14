@@ -1,3 +1,7 @@
+/** 
+ * This is a service responsible for controlling the application workflow.
+*/
+
 import { Injectable } from "@angular/core";
 import { PAGES } from "./workflow.model";
 
