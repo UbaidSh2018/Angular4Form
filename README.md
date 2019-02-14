@@ -10,7 +10,7 @@ Run `ng serve`. Navigate to `http://localhost:4200/`.
     
 ---
 #### Journey through Task Completion: 
-##### Challenge Numero Uno :  
+##### Biggest Challenge :  
 Limited knowledge of programming with Angular(TypeScript). 
 ##### Approach: 
 My approach to taking on this challenge started off with two questions:
