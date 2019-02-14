@@ -18,7 +18,7 @@ My approach to taking on this challenge started off with two questions:
 1. Should I rush through the solution, deliver within the tight deadline and somehow make it work?
 2. Should I take my time and use it as an opportunity to build a new skill while doing this task?
     
-Initial thoughts: Go for number 2. But You need a job. There might be others submitting their codes before you. 
+Initial thoughts: Go for number 2. But You want this job. There might be others submitting their codes before you. 
     
  ##### Hold On...
 
